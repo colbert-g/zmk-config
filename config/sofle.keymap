@@ -34,7 +34,7 @@
 &kp BP_W    &kp BP_B    &kp BP_EACU &kp BP_P    &kp BP_O    &kp BP_EGRV                        &kp BP_DCIR &kp BP_V    &kp BP_D    &kp BP_L    &kp BP_J    &kp BP_Z
 &kp BP_CCED MT_A_AGR    MT_U_CMD    MT_I_CTL    MT_E_ALT    &kp BP_COMM                        &kp BP_C    &kp BP_T    &kp BP_S    &kp BP_R    &kp BP_N    &kp BP_M 
 &kp TAB     &kp BP_AGRV &kp BP_Y    &kp BP_X    &kp BP_DOT  &kp BP_K      &kp C_MUTE &none       &kp BP_QUOT &kp BP_Q    &kp BP_G    &kp BP_H    &kp BP_F    &kp BSPC
-                        &kp LALT    &kp LCTRL   &kp LSHFT   &mt LSHFT RET &lt 1 RET  &mo 2 SPACE &mt RALT SPACE   &kp RGUI    &kp RCTRL   &kp LALT
+                        &kp LALT    &kp LCTRL   &kp LSHFT   &mt LSHFT RET &lt 1 RET  &lt 2 SPACE &mt RALT SPACE   &kp RGUI    &kp RCTRL   &kp LALT
            >;
 
            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
