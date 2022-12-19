@@ -13,6 +13,11 @@
 #define xxx &none
 #define ___ &trans
 
+#define MT_A_AGR &mt RALT BP_A
+#define MT_U_CMD &mt LGUI BP_U
+#define MT_I_CTL &mt LCTRL BP_I
+#define MT_E_ALT &mt LALT BP_E
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -23,13 +28,13 @@
 // |  W  |  B  |  É  |  P  |  O  |  È  |                  |  ^  |  V  |  D  |  L  |  J  |  Z  |
 // |  Ç  |  A  |  U  |  I  |  E  |  ,  |                  |  C  |  T  |  S  |  R  |  N  |  M  |
 // | TAB |  À  |  Y  |  X  |  .  |  K  | MUTE  |  |       |  ’  |  Q  |  G  |  H  |  F  | BCK |
-//             | OPT | CTL | CMD | SFT | ENTER |  | SPACE | AGR | CMD | CTL | OPT |
+//             | OPT | CTL | SFT | SFT | ENTER |  | SPACE | SPC | AGR | CTL | OPT |
             bindings = <
 &kp ESC     &kp BP_DQUO &kp BP_LDAQ &kp BP_RDAQ &kp BP_LPRN &kp BP_RPRN                        &kp BP_AT   &kp BP_PLUS &kp BP_MINS &kp BP_SLSH &kp BP_ASTR &kp BP_EQL
 &kp BP_W    &kp BP_B    &kp BP_EACU &kp BP_P    &kp BP_O    &kp BP_EGRV                        &kp BP_DCIR &kp BP_V    &kp BP_D    &kp BP_L    &kp BP_J    &kp BP_Z
-&kp BP_CCED &kp BP_A    &kp BP_U    &kp BP_I    &kp BP_E    &kp BP_COMM                        &kp BP_C    &kp BP_T    &kp BP_S    &kp BP_R    &kp BP_N    &kp BP_M 
-&kp TAB     &kp BP_AGRV &kp BP_Y    &kp BP_X    &kp BP_DOT  &kp BP_K    &kp C_MUTE &none       &kp BP_QUOT &kp BP_Q    &kp BP_G    &kp BP_H    &kp BP_F    &kp BSPC
-                        &kp LALT    &kp LCTRL   &kp LGUI    &kp LSHFT   &lt 1 RET  &lt 2 SPACE &kp RALT    &kp RGUI    &kp RCTRL   &kp LALT
+&kp BP_CCED MT_A_AGR    MT_U_CMD    MT_I_CTL    MT_E_ALT    &kp BP_COMM                        &kp BP_C    &kp BP_T    &kp BP_S    &kp BP_R    &kp BP_N    &kp BP_M 
+&kp TAB     &kp BP_AGRV &kp BP_Y    &kp BP_X    &kp BP_DOT  &kp BP_K      &kp C_MUTE &none       &kp BP_QUOT &kp BP_Q    &kp BP_G    &kp BP_H    &kp BP_F    &kp BSPC
+                        &kp LALT    &kp LCTRL   &kp LSHFT   &mt LSHFT RET &lt 1 RET  &mo 2 SPACE &mt RALT SPACE   &kp RGUI    &kp RCTRL   &kp LALT
            >;
 
            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
