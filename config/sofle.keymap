@@ -10,6 +10,9 @@
 
 #include "bepo.h"
 
+#define xxx &none
+#define ___ &trans
+
 / {
     keymap {
         compatible = "zmk,keymap";
