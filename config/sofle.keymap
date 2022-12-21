@@ -102,9 +102,8 @@ ___               ___           ___       ___       ___        ___              
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-    };
 
-    adjust_layer {
+        adjust_layer {
 // --------------------------------------------------------------------------------------------
 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                  |     |     |     |     |     |     |
 // |     | F10 | F7  | F4  | F1  |     |                  |     |     |     |     |     |     |
