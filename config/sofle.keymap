@@ -31,6 +31,14 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
   {
     keymap {
         compatible = "zmk,keymap";
@@ -40,14 +48,14 @@
 // | ESC |  "  |  «  |  »  |  (  |  )  |                  |  @  |  +  |  -  |  /  |  *  |  =  |
 // |  W  |  B  |  É  |  P  |  O  |  È  |                  |  ^  |  V  |  D  |  L  |  J  |  Z  |
 // |  Ç  |  A  |  U  |  I  |  E  |  ,  |                  |  C  |  T  |  S  |  R  |  N  |  M  |
-// | TAB |  À  |  Y  |  X  |  .  |  K  | MUTE  |  |       |  ’  |  Q  |  G  |  H  |  F  | BCK |
-//             | OPT | CTL | SFT | SFT | ENTER |  | SPACE | SPC | AGR | CTL | OPT |
+// | TAB |  À  |  Y  |  X  |  .  |  K  | MUTE  |  |       |  ’  |  Q  |  G  |  H  |  F  |  %  |
+//             | OPT | DEL | LOW | SFT | SPACE |  |  NAV  | SPC | BCK | CTL | OPT |
             bindings = <
-&kp ESC     &kp BP_DQUO &kp BP_LDAQ &kp BP_RDAQ &kp BP_LPRN &kp BP_RPRN                        &kp BP_AT   &kp BP_PLUS &kp BP_MINS &kp BP_SLSH &kp BP_ASTR &kp BP_EQL
-&kp BP_W    &kp BP_B    &kp BP_EACU &kp BP_P    &kp BP_O    &kp BP_EGRV                        &kp BP_DCIR &kp BP_V    &kp BP_D    &kp BP_L    &kp BP_J    &kp BP_Z
-&kp BP_CCED MT_A_AGR    MT_U_CMD    MT_I_CTL    MT_E_ALT    &kp BP_COMM                        &kp BP_C    &kp BP_T    &kp BP_S    &kp BP_R    &kp BP_N    &kp BP_M 
-&kp TAB     &kp BP_AGRV &kp BP_Y    &kp BP_X    &kp BP_DOT  &kp BP_K      &kp C_MUTE &none       &kp BP_QUOT &kp BP_Q    &kp BP_G    &kp BP_H    &kp BP_F    &kp BSPC
-                        &kp LALT    &kp LCTRL   &kp LSHFT   &mt LSHFT RET &lt 1 RET  &lt 2 SPACE &hm RALT SPACE   &kp RGUI    &kp RCTRL   &kp LALT
+&kp ESC      &kp BP_DQUO  &kp BP_LDAQ  &kp BP_RDAQ  &kp BP_LPRN  &kp BP_RPRN                        &kp BP_AT       &kp BP_PLUS  &kp BP_MINS  &kp BP_SLSH  &kp BP_ASTR  &kp BP_EQL
+&kp BP_W     &kp BP_B     &kp BP_EACU  &kp BP_P     &kp BP_O     &kp BP_EGRV                        &kp BP_DCIR     &kp BP_V     &kp BP_D     &kp BP_L     &kp BP_J     &kp BP_Z
+&kp BP_CCED  MT_A_AGR     MT_U_CMD     MT_I_CTL     MT_E_ALT     &kp BP_COMM                        &kp BP_C        &kp BP_T     &kp BP_S     &kp BP_R     &kp BP_N     &kp BP_M 
+&kp TAB      &kp BP_AGRV  &kp BP_Y     &kp BP_X     &kp BP_DOT   &kp BP_K       &kp C_MUTE   &none  &kp BP_QUOT     &kp BP_Q     &kp BP_G     &kp BP_H     &kp BP_F     &kp BP_PERC
+                          &kp LALT     &kp DEL      &lt 1 BSPC   &mt LSHFT RET  &lt 2 SPACE  &mo 1  &hm RALT SPACE  &kp BSPC     &kp RCTRL    &kp LALT
            >;
 
            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -55,17 +63,17 @@
 
         lower_layer {
 // --------------------------------------------------------------------------------------------
-// | ESC |  *  |  /  |  -  |  +  |  =  |                  |     |     |     |     |     |     |
-// |     |  7  |  4  |  1  |     |     |                  | PGU | HOM |  ^  | END |  $  |     |
-// | DEL |  8  |  5  |  2  |  0  |  ,  |                  | PGD |  <- |  v  | ->  |  %  |     |
-// | TAB |  9  |  6  |  3  |  .  | BCK |       |  |       |     |     |     |     |     |     |
-//             |     |     |     |     |       |  |       |     |     |     |     |
+// |     |     |     |     |     |     |                  |     |     |     |     |     |     |
+// |  /  |  *  |  7  |  4  |  1  |     |                  |     | VL- | MUT | VL+ |     |     |
+// |  -  |  +  |  8  |  5  |  2  |  0  |                  |     | PRE | P/P | NXT |     |     |
+// |     |  =  |  9  |  6  |  3  |  .  |       |  |       |     |     |     |     |     |     |
+//             |     |     | -X- |     |       |  |       |     | -X- |     |     |
             bindings = <
-&trans    &kp BP_ASTR &kp BP_SLSH &kp BP_MINS &kp BP_PLUS &kp BP_EQL                 &trans    &trans   &trans   &trans    &trans      &trans
-&trans    &kp BP_7    &kp BP_4    &kp BP_1    &trans      &trans                     &kp PG_UP &kp HOME &kp UP   &kp END   &kp BP_DLR  &trans
-&kp DEL   &kp BP_8    &kp BP_5    &kp BP_2    &kp BP_0    &trans                     &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp BP_PERC &trans
-&trans    &kp BP_9    &kp BP_6    &kp BP_3    &trans      &kp BSPC   &trans   &trans &trans    &trans   &trans   &trans    &trans      &trans
-                      &trans      &trans      &trans      &trans     &trans   &trans &trans    &trans   &trans   &trans
+___          ___          ___       ___       ___       ___                   ___  ___           ___         ___           ___  ___
+&kp BP_SLSH  &kp BP_ASTR  &kp BP_7  &kp BP_4  &kp BP_1  &trans                ___  &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  ___  ___
+&kp BP_MINS  &kp BP_PLUS  &kp BP_8  &kp BP_5  &kp BP_2  &kp BP_0              ___  &kp C_PREV    &kp C_PP    &kp C_NEXT    ___  ___
+___          &kp BP_EQL   &kp BP_9  &kp BP_6  &kp BP_3  &kp BP_DOT  ___  ___  ___  ___           ___         ___           ___  ___
+                          ___       ___       ___       ___         ___  ___  ___  ___           ___         ___
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -73,17 +81,36 @@
 
         raise_layer {
 // --------------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |                  |     |     |     |     |     |     |
+// | SCZ | C-Z | HOM |  ^  | END | PGU |                  | PGU | HOM |  ^  | END |     |     |
+// | C-V | C-C |  <- |  v  | ->  | PGD |                  | PGD |  <- |  v  | ->  |     |     |
+// | C-t | C-X |     |     |     |     |       |  |       |     |     |     |     |     |     |
+//             |     |     |     |     |  -X-  |  |  -X-  |     |     |     |     |
+            bindings = <
+___               ___           ___       ___       ___        ___                  ___        ___       ___       ___        ___  ___
+&kp LG(LS(BP_Z))  &kp LG(BP_Z)  &kp HOME  &kp UP    &kp END    &kp PG_UP            &kp PG_UP  &kp HOME  &kp UP    &kp END    ___  ___
+&kp LG(BP_V)      &kp LG(BP_C)  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN            &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  ___  ___
+&kp LC(TAB)       &kp LG(BP_X)  ___       ___       ___        ___        ___  ___  ___        ___       ___       ___        ___  ___
+                                ___       ___       ___        ___        ___  ___  ___        ___       ___       ___
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+    };
+
+    adjust_layer {
+// --------------------------------------------------------------------------------------------
 // |BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |                  |     |     |     |     |     |     |
-// | F10 | F7  | F4  | F1  |     |     |                  |     | VL- | MUT | VL+ |     |     |
-// | F11 | F8  | F5  | F2  |     |     |                  |     | PRE | P/P | NXT |     |     |
-// | F12 | F9  | F6  | F3  |     |     |       |  |       |     |     |     |     |     |     |
+// |     | F10 | F7  | F4  | F1  |     |                  |     |     |     |     |     |     |
+// |     | F11 | F8  | F5  | F2  |     |                  |     |     |     |     |     |     |
+// |     | F12 | F9  | F6  | F3  |     |       |  |       |     |     |     |     |     |     |
 //             |     |     |     |     |       |  |       |     |     |     |     |
             bindings = <
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4             &trans    &trans       &trans     &trans       &trans  &trans
-&kp F10    &kp F7       &kp F4       &kp F1       &trans       &trans                   &trans    &kp C_VOL_DN &kp K_MUTE &kp C_VOL_UP &trans  &trans
-&kp F11    &kp F8       &kp F5       &kp F2       &trans       &trans                   &trans    &kp C_PREV   &kp C_PP   &kp C_NEXT   &trans  &trans
-&kp F12    &kp F9       &kp F6       &kp F3       &trans       &trans  &trans   &trans  &trans    &trans       &trans     &trans       &trans  &trans
-                        &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans       &trans     &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4            ___  ___  ___  ___  ___  ___  
+___        &kp F10      &kp F7       &kp F4       &kp F1       ___                     ___  ___  ___  ___  ___  ___  
+___        &kp F11      &kp F8       &kp F5       &kp F2       ___                     ___  ___  ___  ___  ___  ___  
+___        &kp F12      &kp F9       &kp F6       &kp F3       ___           ___  ___  ___  ___  ___  ___  ___  ___
+                        ___          ___          ___          ___           ___  ___  ___  ___  ___  ___  
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
