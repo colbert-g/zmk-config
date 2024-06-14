@@ -29,7 +29,7 @@
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-        }
+        };
     };
 
     conditional_layers {
