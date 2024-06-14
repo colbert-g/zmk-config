@@ -117,7 +117,7 @@
 #define EL_ACUT RA(LS(EL_1DK))  // ´ (dead)
 #define EL_DGRV RA(LS(EL_Y))    // ` (dead)
 #define EL_CARN RA(LS(EL_A))    // ˇ (dead)
-#define EL_RNGA RA(LS(EL_N))    // ° (dead)
+// #define EL_RNGA RA(LS(EL_N))    // ° (dead)
 #define EL_NEQL RA(LS(EL_F))    // !=
 #define EL_DSLS RA(LS(EL_L))    // / (dead) 
 #define EL_PLMN RA(LS(EL_R))    // ±
