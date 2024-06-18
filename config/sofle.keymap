@@ -49,7 +49,7 @@
 // |  /  |  Q  |  C  |  O  |  P  |  W  |              |  J  |  M  |  D  | 1dk |  Y  |  /  | 
 // | SCT |  A  |  S  |  E  |  N  |  F  |              |  L  |  R  |  T  |  I  |  U  |  /  |
 // | TAB |  Z  |  X  |  -  |  V  |  B  | MUT |  |     |  .  |  H  |  G  |  ,  |  K  |  /  |
-//             | CTL | DEL | LOW | SFT | LOW |  | RAI | SPC | BCK | CMD | CTL |
+//             | CTL | DEL | BCK | SFT | LOW |  | RAI | SPC | BCK | CMD | CTL |
             bindings = <
 &kp ESC    &kp EL_1  &kp EL_2   &kp EL_3     &kp EL_4     &kp EL_5                           &kp EL_6        &kp EL_7  &kp EL_8  &kp EL_9     &kp EL_0  xxx
 xxx        &kp EL_Q  &kp EL_C   &kp EL_O     &kp EL_P     &kp EL_W                           &kp EL_J        &kp EL_M  &kp EL_D  &kp EL_1DK   &kp EL_Y  xxx
@@ -64,20 +64,20 @@ xxx        &kp EL_Q  &kp EL_C   &kp EL_O     &kp EL_P     &kp EL_W              
         lower_layer {
 // ----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |              |     |     |     |     |     |     |
-// |     |     | HOM |  ^  | END | PGU |              |     | VL- | MUT | VL+ |     |     |
-// |     |     |  <- |  v  | ->  | PGD |              |     | PRE | P/P | NXT |     |     |
-// |     |     |     |     |     |     |     |  |     |     |  1  |  2  |  3  |     |     |
-//             |     |     |     |     | -X- |  | -X- |     |     |     |     |
+// |     |     | HOM |  ^  | END | PGU |              |  +  |  4  |  5  |  6  |  *  |     |
+// |     |     |  <- |  v  | ->  | PGD |              |  .  |  1  |  2  |  3  |  0  |  =  |
+// |     |     |     |     |     |     |     |  |     |  -  |  7  |  8  |  9  |  /  |     |
+//             |     |     |     |     | -X- |  | -O- |     |     |     |     |
             bindings = <
-___  ___  ___       ___       ___        ___                  ___  ___           ___         ___           ___  ___
-___  ___  &kp HOME  &kp UP    &kp END    &kp PG_UP            ___  &kp C_VOL_DN  &kp K_MUTE  &kp C_VOL_UP  ___  ___
-___  ___  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN            ___  &kp C_PREV    &kp C_PP    &kp C_NEXT    ___  ___
-___  ___  ___       ___       ___        ___        ___  ___  ___  ___           ___         ___           ___  ___
-                    ___       ___        ___        ___  ___  ___  ___           ___         ___
+___  ___  ___       ___       ___        ___                  ___          ___       ___       ___       ___          ___
+___  ___  &kp HOME  &kp UP    &kp END    &kp PG_UP            &kp EL_PLUS  &kp EL_4  &kp EL_5  &kp EL_6  &kp EL_ASTR  ___
+___  ___  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_DN            &kp EL_DOT   &kp EL_1  &kp EL_2  &kp EL_3  &kp EL_0     &kp EL_EQL
+___  ___  ___       ___       ___        ___        ___  ___  &kp EL_MINS  &kp EL_7  &kp EL_8  &kp EL_9  &kp EL_SLSH  ___
+                    ___       ___        ___        ___  ___  ___          ___       ___         ___
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
+        }
 
         raise_layer {
 // ----------------------------------------------------------------------------------------
@@ -85,7 +85,7 @@ ___  ___  ___       ___       ___        ___        ___  ___  ___  ___          
 // |     |     |     |     |     |     |              |     | VL- | MUT | VL+ |     |     |
 // |     |     |     |     |     |     |              |     |  <- |  v  | ->  |     |     |
 // |     |     |     |     |     |     |     |  |     |     |     |     |     |     |     |
-//             |     |     |     |     | -X- |  | -X- |     |     |     |     |
+//             |     |     |     |     | -O- |  | -X- |     |     |     |     |
             bindings = <
 ___  ___  ___  ___  ___  ___            ___  ___       ___       ___        ___  ___
 ___  ___  ___  ___  ___  ___            ___  &kp HOME  &kp UP    &kp END    ___  ___
