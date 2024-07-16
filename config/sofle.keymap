@@ -63,7 +63,7 @@ xxx      &kp EL_1  &kp EL_2   &kp EL_3     &kp EL_4        &kp EL_5             
 &kp ESC  &kp EL_Q  &kp EL_C   &kp EL_O     &kp EL_P        &kp EL_W                                &kp EL_J        &kp EL_M       &kp EL_D  &kp EL_1DK   &kp EL_Y  xxx
 &kp TAB  HM_A_AGR  HM_S_CMD   HM_E_CTL     HM_N_ALT        HM_F_SFT                                &kp EL_L        &kp EL_R       &kp EL_T  &kp EL_I     &kp EL_U  &kp RET
 xxx      &kp EL_Z  &kp EL_X   &kp EL_MINS  &kp EL_V        &kp EL_B         &kp C_MUTE   &kp C_PP  &kp EL_DOT      &kp EL_H       &kp EL_G  &kp EL_COMM  &kp EL_K  xxx
-                   xxx        xxx          &mt LCMD BSPC   &mt LSHFT SPACE  &mo_tog 2 1  &mo 2     &hm RALT SPACE  &mt RCMD BSPC  xxx       xxx
+                   xxx        xxx          &mt LCMD BSPC   &mt LSHFT SPACE  &mo 2        &mo 2     &hm RALT SPACE  &mt RCMD BSPC  xxx       xxx
            >;
 
            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
@@ -87,19 +87,19 @@ ___         &kp EL_SLSH  &kp EL_9  &kp EL_8  &kp EL_7  &kp EL_MINS  ___  ___  __
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
         };
 
-        nav_layer {
+        navnum_layer {
 // ----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |              |     |     |     |     |     |     |
-// |     | ESC | BCK |  ^  | DEL | CPL |              |     |     |     |     |     |     |
-// |     | HOM |  <- |  v  | ->  | END |              |     |     |     |     |     |     |
-// |     | TAB |     |     | RET |     |     |  |     |     |     |     |     |  /  |     |
-//             |     |     |     |     | -X- |  | -O- |     |     |     |     |
+// |     | ESC | BCK |  ^  | DEL | CPL |              |  *  |  4  |  5  |  6  |  +  |     |
+// |     | HOM |  <- |  v  | ->  | END |              |  =  |  1  |  2  |  3  |  0  |     |
+// |     | TAB |     |     | RET |     |     |  |     |  /  |  7  |  8  |  9  |  -  |     |
+//             |     |     |     |     | -X- |  | -O- |  .  |     |     |     |
             bindings = <
-___  ___       ___       ___       ___        ___                    ___          ___       ___       ___       ___          ___
-___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS               &kp EL_PLUS  &kp EL_4  &kp EL_5  &kp EL_6  &kp EL_ASTR  ___
-___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                &kp EL_DOT   &kp EL_1  &kp EL_2  &kp EL_3  &kp EL_0     &kp EL_EQL
-___  &kp TAB   ___       ___       &kp RET    ___        ___  ___    &kp EL_MINS  &kp EL_7  &kp EL_8  &kp EL_9  &kp EL_SLSH  ___
-               ___       ___       ___        ___        ___  &mo 3  ___          ___       ___         ___     
+___  ___       ___       ___       ___        ___                    ___               ___       ___       ___       ___          ___
+___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS               &kp EL_ASTR       &kp EL_4  &kp EL_5  &kp EL_6  &kp EL_PLUS  ___
+___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                &kp EL_EQL        &kp EL_1  &kp EL_2  &kp EL_3  &kp EL_0     ___
+___  &kp TAB   ___       ___       &kp RET    ___        ___  ___    &kp EL_SLSH       &kp EL_7  &kp EL_8  &kp EL_9  &kp EL_MINS  ___
+               ___       ___       ___        ___        ___  &mo 3  &hm RALT EL_DOT   ___       ___         ___     
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
