@@ -90,15 +90,15 @@ ___         &kp EL_SLSH  &kp EL_9  &kp EL_8  &kp EL_7  &kp EL_MINS  ___  ___  __
         nav_layer {
 // ----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |              |     |     |     |     |     |     |
-// |     | ESC | BCK |  ^  | DEL |     |              |     |     |     |     |     |     |
+// |     | ESC | BCK |  ^  | DEL | CPL |              |     |     |     |     |     |     |
 // |     | HOM |  <- |  v  | ->  | END |              |     |     |     |     |     |     |
-// |     |     |     |     | RET |     |     |  |     |     |     |     |     |  /  |     |
+// |     | TAB |     |     | RET |     |     |  |     |     |     |     |     |  /  |     |
 //             |     |     |     |     | -X- |  | -O- |     |     |     |     |
             bindings = <
 ___  ___       ___       ___       ___        ___                    ___          ___       ___       ___       ___          ___
-___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    ___                    &kp EL_PLUS  &kp EL_4  &kp EL_5  &kp EL_6  &kp EL_ASTR  ___
+___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS               &kp EL_PLUS  &kp EL_4  &kp EL_5  &kp EL_6  &kp EL_ASTR  ___
 ___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                &kp EL_DOT   &kp EL_1  &kp EL_2  &kp EL_3  &kp EL_0     &kp EL_EQL
-___  ___       ___       ___       &kp RET    ___        ___  ___    &kp EL_MINS  &kp EL_7  &kp EL_8  &kp EL_9  &kp EL_SLSH  ___
+___  &kp TAB   ___       ___       &kp RET    ___        ___  ___    &kp EL_MINS  &kp EL_7  &kp EL_8  &kp EL_9  &kp EL_SLSH  ___
                ___       ___       ___        ___        ___  &mo 3  ___          ___       ___         ___     
             >;
 
