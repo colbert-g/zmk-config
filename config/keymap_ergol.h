@@ -19,8 +19,6 @@
 #define EL_8    N8      // 8
 #define EL_9    N9      // 9
 #define EL_0    N0      // 0
-#define EL_SLSH MINUS   // /
-#define EL_EQL  EQUAL   // =
 #define EL_Q    Q       // Q
 #define EL_C    W       // C
 #define EL_O    E       // O
@@ -63,14 +61,11 @@
 #define EL_LDQF LS(EL_2)    // «
 #define EL_RDQF LS(EL_3)    // »
 #define EL_DLR  LS(EL_4)    // $
-#define EL_PERC LS(EL_5)    // %
 #define EL_CIRC LS(EL_6)    // ^
 #define EL_AMPR LS(EL_7)    // &
-#define EL_ASTR LS(EL_8)    // *
 #define EL_HASH LS(EL_9)    // #
 #define EL_AT   LS(EL_0)    // @
 #define EL_UNDS LS(EL_SLSH) // _
-#define EL_PLUS LS(EL_EQL)  // =
 #define EL_EXCL LS(EL_1DK)  // !
 #define EL_LCBR LS(EL_LBRC) // {
 #define EL_RCBR LS(EL_RBRC) // }
@@ -94,6 +89,12 @@
 #define EL_SUB0 RA(EL_0)    // ₀
 #define EL_LPRN RA(EL_S)    // (
 #define EL_RPRN RA(EL_E)    // )
+
+#define EL_EQL  RA(EL_F) // =
+#define EL_PLUS RA(EL_R) // +
+#define EL_ASTR RA(EL_D) // *
+#define EL_SLSH RA(EL_I) // /
+#define EL_PERC RA(EL_W) // %
 
 //ALTGR  //Symbol layer //SHIFTED
 #define EL_SUP1 RA(LS(EL_1))    // ¹
