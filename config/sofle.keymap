@@ -72,7 +72,7 @@ xxx      &kp EL_Z        &kp EL_X       &kp EL_MINS     &kp EL_V       &kp EL_B 
 //             |     |     |     |     | nav |  | -X- |     |     |     |     |
             bindings = <
 ___  ___          ___          ___          ___         ___                                    ___         ___          ___          ___          ___          ___
-___  &kp EL_EURO  &kp EL_LDQF  &kp EL_RDQF  &kp EL_DLR  &kp EL_PERC                            &kp EL_AT   &kp EL_AMPR  &kp EL_ASTR  &kp EL_SLSH  &kp EL_EURO  ___
+___  &kp EL_CIRC  &kp EL_LDQF  &kp EL_RDQF  &kp EL_DLR  &kp EL_PERC                            &kp EL_AT   &kp EL_AMPR  &kp EL_ASTR  &kp EL_SLSH  &kp EL_EURO  ___
 ___  &kp EL_1     &kp EL_2     &kp EL_3     &kp EL_4    &kp EL_5                               &kp EL_6    &kp EL_7     &kp EL_8     &kp EL_9     &kp EL_0     ___
 ___  &kp EL_TILD  &kp EL_SUP2  &kp EL_SUP3  &kp EL_EQL  &kp EL_HASH  ___                  ___  &kp EL_DOT  &kp EL_PLUS  &kp EL_MINS  &kp EL_COMM  ___          ___
                   ___          ___          ___         ___          &lt 2 RA(LS(SPACE))  ___  ___         ___       ___         ___     
