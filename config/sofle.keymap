@@ -53,11 +53,11 @@
 // |     |  Z  |  X  |  -  |  V  |  B  | MUT |  | P/P |  .  |  H  |  G  |  ,  |  K  |     |
 //             |     |     |     | SFT | nav |  | num | SPC | BCK |     |     |
             bindings = <
-&tog 2   &kp EL_1        &kp EL_2       &kp EL_3        &kp EL_4       &kp EL_5                          &kp EL_6        &kp EL_7       &kp EL_8        &kp EL_9     &kp EL_0  xxx
-xxx      &kp EL_Q        &kp EL_C       &kp EL_O        &kp EL_P       &kp EL_W                          &kp EL_J        &kp EL_M       &kp EL_D        &kp EL_1DK   &kp EL_Y  xxx
-&kp TAB  &hm LSHFT EL_A  &hm LGUI EL_S  &hm LCTRL EL_E  &hm LALT EL_N  &kp EL_F                          &kp EL_L        &hm LALT EL_R  &hm RCTRL EL_T  &kp EL_I     &kp EL_U  &kp RET
-xxx      &kp EL_Z        &kp EL_X       &kp EL_MINS     &kp EL_V       &kp EL_B   &kp C_MUTE   &kp C_PP  &kp EL_DOT      &kp EL_H       &kp EL_G        &kp EL_COMM  &kp EL_K  &kp SPACE
-                         xxx            xxx             &kp LCMD       &kp LSHFT  &lt 2 SPACE  &mo 1     &hm RALT SPACE  &mt RCMD BSPC  xxx             xxx
+&tog 2   &kp EL_1        &kp EL_2       &kp EL_3        &kp EL_4       &kp EL_5                          &kp EL_6     &kp EL_7       &kp EL_8        &kp EL_9     &kp EL_0  xxx
+xxx      &kp EL_Q        &kp EL_C       &kp EL_O        &kp EL_P       &kp EL_W                          &kp EL_J     &kp EL_M       &kp EL_D        &kp EL_1DK   &kp EL_Y  xxx
+&kp TAB  &hm LSHFT EL_A  &hm LGUI EL_S  &hm LCTRL EL_E  &hm LALT EL_N  &kp EL_F                          &kp EL_L     &hm LALT EL_R  &hm RCTRL EL_T  &kp EL_I     &kp EL_U  &kp RET
+xxx      &kp EL_Z        &kp EL_X       &kp EL_MINS     &kp EL_V       &kp EL_B   &kp C_MUTE   &kp C_PP  &kp EL_DOT   &kp EL_H       &kp EL_G        &kp EL_COMM  &kp EL_K  &kp SPACE
+                         xxx            xxx             &kp LCMD       &kp LSHFT  &lt 2 SPACE  &kp RALT  &lt 1 SPACE  &kp BSPC       xxx             xxx
            >;
 
            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
@@ -87,13 +87,13 @@ ___  &kp EL_TILD  &kp EL_SUP2  &kp EL_SUP3  &kp EL_EQL  &kp EL_HASH  ___        
 // |     | ESC | BCK |  ^  | DEL | CPL |              |     |     |     |     |     |     |
 // |     | HOM |  <- |  v  | ->  | END |              |     |     |     |     |     |     |
 // |     | TAB |     |     | RET | STB |     |  |     |     |     |     |     |     |     |
-//             |     |     |     |     | -X- |  |     |     |     |     |     |
+//             |     |     |     |     | -X- |  | cnf |     |     |     |     |
             bindings = <
-___  ___       ___       ___       ___        ___                    ___   ___  ___  ___  ___  ___
-___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS               ___   ___  ___  ___  ___  ___
-___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                ___   ___  ___  ___  ___  ___
-___  &kp TAB   ___       ___       &kp RET    &kp LS(TAB)  ___  ___  ___   ___  ___  ___  ___  ___
-               ___       ___       ___        ___          ___  ___  ___   ___  ___  ___     
+___  ___       ___       ___       ___        ___                      ___   ___  ___  ___  ___  ___
+___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS                 ___   ___  ___  ___  ___  ___
+___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                  ___   ___  ___  ___  ___  ___
+___  &kp TAB   ___       ___       &kp RET    &kp LS(TAB)  ___  ___    ___   ___  ___  ___  ___  ___
+               ___       ___       ___        ___          ___  &mo 3  ___   ___  ___  ___     
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_DN PG_UP>;
@@ -102,19 +102,21 @@ ___  &kp TAB   ___       ___       &kp RET    &kp LS(TAB)  ___  ___  ___   ___  
         config_layer {
 // --------------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |                  |     |     |     |     |     |     |
-// |     |     |     |     |     |     |                  |     | BT4 | BT5 |     |     |     |
-// |     |     |     |     |     |     |                  |     | BT1 | BT2 | BT3 |BTCLR|     |
+// |     |     |     |     |     |     |                  |     |     |     |     |     |     |
+// |     | BT1 | BT2 | BT3 | BT4 | BT5 |                  |     |     |     |     |BTCLR|     |
 // |     |     |     |     |     |     |       |  |       |     |     |     |     |     |     |
 //             |     |     |     |     |       |  |       |     |     |     |     |
             bindings = <
-___  ___  ___  ___  ___  ___            ___  ___           ___           ___           ___         ___  
-___  ___  ___  ___  ___  ___            ___  &bt BT_SEL 3  &bt BT_SEL 4  ___           ___         ___  
-___  ___  ___  ___  ___  ___            ___  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR  ___  
-___  ___  ___  ___  ___  ___  ___  ___  ___  ___           ___           ___           ___         ___ 
-          ___  ___  ___  ___  ___  ___  ___  ___           ___           ___           ___    
+___  ___           ___           ___           ___           ___                     ___  ___  ___  ___  ___        ___  
+___  ___           ___           ___           ___           ___                     ___  ___  ___  ___  ___        ___
+___  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4            ___  ___  ___  ___  &bt BT_CLR ___
+___  ___           ___           ___           ___           ___           ___  ___  ___  ___  ___  ___  ___        ___ 
+                   ___           ___           ___           ___           ___  ___  ___  ___  ___  ___      
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
         };
     };
 };
+
+
