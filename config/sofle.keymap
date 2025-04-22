@@ -51,31 +51,49 @@
 // |     |  Q  |  C  |  O  |  P  |  W  |              |  J  |  M  |  D  | 1dk |  Y  |     | 
 // | TAB |  A  |  S  |  E  |  N  |  F  |              |  L  |  R  |  T  |  I  |  U  | RET |
 // |     |  Z  |  X  |  -  |  V  |  B  | MUT |  | P/P |  .  |  H  |  G  |  ,  |  K  |     |
-//             |     |     | BCK | SFT | LOW |  | RAI | SPC | BCK |     |     |
+//             |     |     |     | SFT | nav |  | num | SPC | BCK |     |     |
             bindings = <
-&tog 1   &kp EL_1        &kp EL_2       &kp EL_3        &kp EL_4       &kp EL_5                             &kp EL_6        &kp EL_7       &kp EL_8  &kp EL_9     &kp EL_0  xxx
-xxx      &kp EL_Q        &kp EL_C       &kp EL_O        &kp EL_P       &kp EL_W                             &kp EL_J        &kp EL_M       &kp EL_D  &kp EL_1DK   &kp EL_Y  xxx
-&kp TAB  &hm LSHFT EL_A  &hm LGUI EL_S  &hm LCTRL EL_E  &hm LALT EL_N  &kp EL_F                             &kp EL_L        &hm LALT EL_R  &kp EL_T  &kp EL_I     &kp EL_U  &kp RET
-xxx      &kp EL_Z        &kp EL_X       &kp EL_MINS     &kp EL_V       &kp EL_B   &kp C_MUTE   &kp C_PP     &kp EL_DOT      &kp EL_H       &kp EL_G  &kp EL_COMM  &kp EL_K  &kp SPACE
-                         xxx            xxx             &kp LCMD       &kp LSHFT  &lt 1 SPACE  &lt 1 SPACE  &hm RALT SPACE  &mt RCMD BSPC  xxx       xxx
+&tog 2   &kp EL_1        &kp EL_2       &kp EL_3        &kp EL_4       &kp EL_5                          &kp EL_6        &kp EL_7       &kp EL_8        &kp EL_9     &kp EL_0  xxx
+xxx      &kp EL_Q        &kp EL_C       &kp EL_O        &kp EL_P       &kp EL_W                          &kp EL_J        &kp EL_M       &kp EL_D        &kp EL_1DK   &kp EL_Y  xxx
+&kp TAB  &hm LSHFT EL_A  &hm LGUI EL_S  &hm LCTRL EL_E  &hm LALT EL_N  &kp EL_F                          &kp EL_L        &hm LALT EL_R  &hm RCTRL EL_T  &kp EL_I     &kp EL_U  &kp RET
+xxx      &kp EL_Z        &kp EL_X       &kp EL_MINS     &kp EL_V       &kp EL_B   &kp C_MUTE   &kp C_PP  &kp EL_DOT      &kp EL_H       &kp EL_G        &kp EL_COMM  &kp EL_K  &kp SPACE
+                         xxx            xxx             &kp LCMD       &kp LSHFT  &lt 2 SPACE  &mo 1     &hm RALT SPACE  &mt RCMD BSPC  xxx             xxx
            >;
 
            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
         };
 
-        navnum_layer {
+        num_layer {
 // ----------------------------------------------------------------------------------------
 // |     |     |     |     |     |     |              |     |     |     |     |     |     |
-// |     | ESC | BCK |  ^  | DEL | CPL |              |  *  |  4  |  5  |  6  |  +  |     |
-// |     | HOM |  <- |  v  | ->  | END |              |  =  |  1  |  2  |  3  |  0  |     |
-// |     | TAB |     |     | RET | STB |     |  |     |  /  |  7  |  8  |  9  |  -  |     |
-//             |     |     |     |     | -X- |  | -O- |  .  |     |     |     |
+// |     |  ^  |  «  |  »  |  $  |  %  |              |  @  |  &  |  *  |  /  |  €  |     |
+// |     |  1  |  2  |  3  |  4  |  5  |              |  6  |  7  |  8  |  9  |  0  |     |
+// |     |  ~  |  ²  |  ³  |  =  |  #  |     |  |     |  .  |  +  |  -  |  ,  |  °  |     |
+//             |     |     |     |     | nav |  | -X- |     |     |     |     |
             bindings = <
-___  ___       ___       ___       ___        ___                      ___               ___       ___       ___       ___          ___
-___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS                 &kp EL_ASTR       &kp EL_4  &kp EL_5  &kp EL_6  &kp EL_PLUS  ___
-___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                  &kp EL_EQL        &kp EL_1  &kp EL_2  &kp EL_3  &kp EL_0     ___
-___  &kp TAB   ___       ___       &kp RET    &kp LS(TAB)  ___  ___    &kp EL_SLSH       &kp EL_7  &kp EL_8  &kp EL_9  &kp EL_MINS  ___
-               ___       ___       ___        ___          ___  &mo 2  &hm RALT EL_DOT   ___       ___         ___     
+___  ___          ___          ___          ___         ___                                   ___         ___          ___          ___          ___          ___
+___  &kp EL_EURO  &kp EL_LDQF  &kp EL_RDQF  &kp EL_DLR  &kp EL_PERC                           &kp EL_AT   &kp EL_AMPR  &kp EL_ASTR  &kp EL_SLSH  &kp EL_EURO  ___
+___  &kp EL_1     &kp EL_2     &kp EL_3     &kp EL_4    &kp EL_5                              &kp EL_6    &kp EL_7     &kp EL_8     &kp EL_9     &kp EL_0     ___
+___  &kp EL_TILD  &kp EL_SUP2  &kp EL_SUP3  &kp EL_EQL  &kp EL_HASH  ___                 ___  &kp EL_DOT  &kp EL_PLUS  &kp EL_MINS  &kp EL_COMM  ___          ___
+                  ___          ___          ___         ___          &lt 2 RA(LS(SPACE)  ___  ___         ___       ___         ___     
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
+        };
+
+        nav_layer {
+// ----------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |              |     |     |     |     |     |     |
+// |     | ESC | BCK |  ^  | DEL | CPL |              |     |     |     |     |     |     |
+// |     | HOM |  <- |  v  | ->  | END |              |     |     |     |     |     |     |
+// |     | TAB |     |     | RET | STB |     |  |     |     |     |     |     |     |     |
+//             |     |     |     |     | -X- |  |     |     |     |     |     |
+            bindings = <
+___  ___       ___       ___       ___        ___                    ___   ___  ___  ___  ___  ___
+___  &kp ESC   &kp BSPC  &kp UP    &kp DEL    &kp CAPS               ___   ___  ___  ___  ___  ___
+___  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END                ___   ___  ___  ___  ___  ___
+___  &kp TAB   ___       ___       &kp RET    &kp LS(TAB)  ___  ___  ___   ___  ___  ___  ___  ___
+               ___       ___       ___        ___          ___  ___  ___   ___  ___  ___     
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_NEXT C_PREV>;
